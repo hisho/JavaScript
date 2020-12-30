@@ -1,0 +1,61 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=14.8.0"
+  },
+  "homepage": "https://github.com/hishohub/JavaScript#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hishohub/JavaScript.git"
+  },
+  "scripts": {
+    "preinstall": "npx check-engines && npx only-allow npm",
+    "start": "NODE_ENV=development MODE=start run-s _pre-start _start",
+    "start-pro": "NODE_ENV=production MODE=start run-s _pre-start _start",
+    "build": "NODE_ENV=production MODE=build run-s _pre-start _build",
+    "build-dev": "NODE_ENV=development MODE=build run-s _pre-start _build",
+    "server": "browser-sync start --config ./.config/bs-config.js",
+    "gulp-clean": "gulp clean",
+    "gulp-clone": "gulp clone",
+    "gulp-watch": "gulp watch",
+    "gulp-build": "run-s gulp-clone",
+    "webpack-build": "webpack",
+    "webpack-watch": "webpack -w",
+    "_pre-start": "run-s gulp-clean",
+    "_start": "run-p gulp-build gulp-watch webpack-watch server",
+    "_build": "run-p gulp-build webpack-build"
+  },
+  "devDependencies": {
+    "@types/autoprefixer": "^9.7.2",
+    "@types/browser-sync": "^3001.0.28-alpha",
+    "@types/fs-extra": "^9.0.6",
+    "@types/gulp": "^4.0.7",
+    "@types/node": "^14.14.16",
+    "@types/postcss-import": "^12.0.0",
+    "@types/postcss-nested": "^4.2.3",
+    "@types/through2": "^2.0.36",
+    "autoprefixer": "^10.1.0",
+    "browser-sync": "^2.26.13",
+    "chalk": "^4.1.0",
+    "css-loader": "^5.0.1",
+    "dayjs": "^1.9.8",
+    "del": "^6.0.0",
+    "extract-css-chunks-webpack-plugin": "^4.9.0",
+    "fork-ts-checker-webpack-plugin": "^6.0.8",
+    "fs-extra": "^9.0.1",
+    "gulp": "^4.0.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.2",
+    "postcss-import": "^14.0.0",
+    "postcss-loader": "^4.1.0",
+    "postcss-nested": "^5.0.3",
+    "through2": "^4.0.2",
+    "ts-loader": "^8.0.12",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0",
+    "webpack-fix-style-only-entries": "^0.6.0"
+  }
+}
