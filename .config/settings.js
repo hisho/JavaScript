@@ -16,6 +16,7 @@ const settings = {
     entries: {
       [DIST_PATH + 'assets/js/main']: './src/js/main',
       [DIST_PATH + 'assets/css/common']: './src/styles/common',
+      [DIST_PATH + 'assets/css/utilities']: './src/styles/utilities',
     },
   }
 };
