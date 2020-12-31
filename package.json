@@ -17,6 +17,7 @@
     "start-pro": "NODE_ENV=production MODE=start run-s _pre-start _start",
     "build": "NODE_ENV=production MODE=build run-s _pre-start _build",
     "build-dev": "NODE_ENV=development MODE=build run-s _pre-start _build",
+    "serve": "run-s build server",
     "server": "browser-sync start --config ./.config/bs-config.js",
     "gulp-clean": "gulp clean",
     "gulp-clone": "gulp clone",
