@@ -4,8 +4,11 @@ const settings = require(path.resolve(__dirname, '.config/settings'));
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TypeScriptSettings = require(path.resolve(__dirname, '.config/webpack/typeScriptSettings'));
 const cssSettings = require(path.resolve(__dirname, '.config/webpack/cssSettings'));
+const Pages = require(path.resolve(__dirname, '.config/webpack/pages.js'));
+
 
 module.exports = () => {
   console.log(`CURRENT MODE -> ${process.env.NODE_ENV}`);
@@ -23,6 +26,9 @@ module.exports = () => {
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.css'],
+      alias: {
+        'src': path.resolve('./src'),
+      },
     },
     devtool: IS_DEVELOPMENT ? 'inline-source-map' : false,
     target: ['web', 'es5'],
@@ -30,14 +36,22 @@ module.exports = () => {
       rules: [...TypeScriptSettings, ...cssSettings],
     },
     plugins: [
-      new webpack.ProgressPlugin(),
-      new ForkTsCheckerWebpackPlugin(),
-      new FixStyleOnlyEntriesPlugin(),
-      new ExtractCssChunks({
-        filename: '[name].css',
-        chunkFilename: '[id].css',
-        orderWarning: true,
-      }),
+      ...Pages.map(({template, filename, relativePath}) => new HtmlWebpackPlugin({
+        template,
+        filename,
+        relativePath,
+        inject: false,
+      })),
+      ...[
+        new webpack.ProgressPlugin(),
+        new ForkTsCheckerWebpackPlugin(),
+        new FixStyleOnlyEntriesPlugin(),
+        new ExtractCssChunks({
+          filename: '[name].css',
+          chunkFilename: '[id].css',
+          orderWarning: true,
+        }),
+      ]
     ],
   }
 

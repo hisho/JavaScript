@@ -13,6 +13,9 @@
     "downlevelIteration": true,
     "lib": ["dom", "es2015", "dom.iterable"],
     "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"]
+    },
     "strict": true,
     "moduleResolution": "node",
     "noUnusedLocals": true,

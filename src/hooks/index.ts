@@ -1,0 +1,1 @@
+export {newRenderToStaticMarkup} from './newRenderToStaticMarkup';
