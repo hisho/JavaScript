@@ -41,3 +41,12 @@ $ npm run build
 ```shell script
 $ npm run serve
 ```
+
+# TODO
+
+- [ ] eslint
+- [ ] prettier
+- [ ] husky
+- [x] stylelint
+- [ ] layout
+- [ ] links
