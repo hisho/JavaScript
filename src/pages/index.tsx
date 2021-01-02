@@ -6,7 +6,6 @@ import {ButtonLink, Section} from "src/components";
 export default ({htmlWebpackPlugin}: ProcessedOptions) => {
   return newRenderToStaticMarkup(
     <>
-      テスト
       <Section>
         <div className="flex flex-col">
           <ButtonLink>TOP</ButtonLink>
