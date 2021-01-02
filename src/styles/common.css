@@ -3,6 +3,7 @@
 @import "src/styles/foundation/reset.css";
 @import "src/components/section/index.css";
 @import "src/components/button/index.css";
+@import "src/components/link/buttonLink.css";
 
 .test {
   display: grid;
