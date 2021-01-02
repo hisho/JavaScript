@@ -1,12 +1,12 @@
 .section {
-  scroll-snap-align: start;
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
   border: 5px solid;
-  border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-slice: 1;
+  scroll-snap-align: start;
   > div {
     display: flex;
     flex-direction: column;

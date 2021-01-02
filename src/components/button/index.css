@@ -1,16 +1,16 @@
-.button[type="button"] {
-  color: #fff;
-  font-weight: 900;
-  min-width: 200px;
-  padding: 10px;
+.button[type='button'] {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 200px;
+  padding: 10px;
+  font-weight: 900;
+  color: #fff;
   background-image: linear-gradient(to left, #f64ff6, #71a9ed, #77f586);
   background-position: 100% 0;
   background-size: 200% 100%;
   border-radius: 4px;
-  transition: background-position 0.5s ease-out;
+  transition: background-position .5s ease-out;
 
   &:hover, &:focus {
     background-position: 0 0;
