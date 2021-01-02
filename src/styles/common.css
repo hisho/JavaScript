@@ -5,6 +5,8 @@
 @import "src/components/button/index.css";
 @import "src/components/link/buttonLink.css";
 
-.test {
-  display: grid;
+body {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
 }
