@@ -13,6 +13,7 @@ export const Layout: FC<LayoutType> = ({children}) => {
       <Helmet>
         <html lang="ja"/>
         <meta charSet="UTF-8"/>
+        <title>Practice JavaScript</title>
         <script src={`${path}assets/js/main.js`} defer/>
         <link rel="stylesheet" href={`${path}assets/css/common.css`}/>
         <link rel="stylesheet" href={`${path}assets/css/utilities.css`}/>
