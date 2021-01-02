@@ -42,6 +42,14 @@ $ npm run build
 $ npm run serve
 ```
 
+# HOW TO
+
+1. git clone
+2. check out `develop` brunch
+3. create `your name` brunch from `develop`
+4. `npm ci`
+5. `npm start`
+
 # TODO
 
 - [ ] eslint
