@@ -17,7 +17,7 @@ const clean = (done) => {
   //start OR start-pro
   if (start || startPro) {
     console.log('start & start-pro');
-    const productionDelItems = [`${settings.DIST_PATH}**/*.html`];
+    const productionDelItems = [''];
     productionDelItems.forEach((item) => {
       delPatterns.push(item);
     });
