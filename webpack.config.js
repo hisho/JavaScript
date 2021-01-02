@@ -4,6 +4,7 @@ const settings = require(path.resolve(__dirname, '.config/settings'));
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TypeScriptSettings = require(path.resolve(__dirname, '.config/webpack/typeScriptSettings'));
 const cssSettings = require(path.resolve(__dirname, '.config/webpack/cssSettings'));
@@ -46,6 +47,10 @@ module.exports = () => {
         new webpack.ProgressPlugin(),
         new ForkTsCheckerWebpackPlugin(),
         new FixStyleOnlyEntriesPlugin(),
+        new StyleLintPlugin({
+          configFile: path.resolve('.config/.stylelintrc.js'),
+          fix: true,
+        }),
         new ExtractCssChunks({
           filename: '[name].css',
           chunkFilename: '[id].css',
