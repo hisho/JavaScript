@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "foundation/reset.css";
+@import "src/styles/foundation/reset.css";
 @import "src/components/section/index.css";
 @import "src/components/button/index.css";
 
