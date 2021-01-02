@@ -7,7 +7,8 @@ export default ({htmlWebpackPlugin}: ProcessedOptions) => {
   return newRenderToStaticMarkup(
     <>
       <Section>
-        <div className="flex flex-col">
+        <div>
+          <ButtonLink href="lesson01/level00">level00</ButtonLink>
           <ButtonLink>TOP</ButtonLink>
           <ButtonLink href="template">テンプレート</ButtonLink>
         </div>
