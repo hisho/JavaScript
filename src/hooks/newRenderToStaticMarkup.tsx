@@ -3,6 +3,7 @@ import React, {ReactElement} from "react";
 import {Helmet} from "react-helmet";
 import {ProcessedOptions} from 'html-webpack-plugin';
 import {CurrentPage, pathType} from "src/config";
+import {Layout} from "src/layouts";
 
 function myRenderToStaticMarkup(element: ReactElement): string {
   const staticMarkup = renderToStaticMarkup(element);
@@ -31,7 +32,9 @@ export function newRenderToStaticMarkup(element: ReactElement) {
     const relativePath: pathType = htmlWebpackPlugin.options.relativePath;
     return myRenderToStaticMarkup(
       <CurrentPage.Provider value={{path: relativePath}}>
-        {element}
+        <Layout>
+          {element}
+        </Layout>
       </CurrentPage.Provider>
     )
   }
