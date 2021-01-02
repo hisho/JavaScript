@@ -2,6 +2,7 @@
 
 @import "foundation/reset.css";
 @import "src/components/section/index.css";
+@import "src/components/button/index.css";
 
 .test {
   display: grid;
