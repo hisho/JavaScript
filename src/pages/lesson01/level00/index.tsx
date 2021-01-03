@@ -8,8 +8,7 @@ export default ({htmlWebpackPlugin}: ProcessedOptions) => {
     <>
       <Section>
         <div>
-          <p>ボタンを押すと背景色が変わるコードを書け！</p>
-          <p>再度ボタンを押すと元の色に戻るようにせよ！</p>
+          <p>ボタンを押すと背景色が#3cb371と#ffa500に交互に変わるコードを書け！</p>
           <ButtonLink>TOPに戻る</ButtonLink>
           <p className="text-center text-8xl">↓</p>
         </div>
