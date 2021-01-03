@@ -16,12 +16,9 @@ if(buttons.length) {
       iniColor: colorPallet[index].iniColor,
       altColor: colorPallet[index].altColor,
     });
-    const buttonParent = <HTMLElement>document.body;
 
-    if(buttonParent) {
-      button.addEventListener('click', (_evt) => {
-        toggleBgColor.toggle();
-      })
-    }
+    button.addEventListener('click', (_evt) => {
+      toggleBgColor.toggle();
+    })
   })
 }

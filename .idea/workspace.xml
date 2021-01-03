@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d33762ed-0043-4742-91dc-e8457ab5d1ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lesson01/level01.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lesson01/level01.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lesson01/level02.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lesson01/level02.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/lesson01/level03.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lesson01/level03.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/lesson01/level03/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/lesson01/level03/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lib/ToggleBgColor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lib/ToggleBgColor.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,3 +1,6 @@
+/**
+ * 背景色をトグルする
+ */
 export default class ToggleBgColor {
   private elm:HTMLElement;
   private readonly colors: string[];
@@ -5,6 +8,13 @@ export default class ToggleBgColor {
     isAlt:boolean
   };
 
+  /**
+   * コンストラクタ
+   * @param options.elm HTMLElement 背景色を変更するターゲットHTML要素
+   * @param options.iniColor String カラー１
+   * @param options.altColor String カラー２
+   * @return this ToggleBgColor
+   */
   constructor(options?:{
     elm?:HTMLElement,
     iniColor?:string,
@@ -16,8 +26,16 @@ export default class ToggleBgColor {
     this.state = {
       isAlt: false
     };
+    return this;
   }
 
+  /**
+   * 設定を変更する
+   * @param options.elm HTMLElement 背景色を変更するターゲットHTML要素
+   * @param options.iniColor String カラー１
+   * @param options.altColor String カラー２
+   * @return this ToggleBgColor;
+   */
   config(options: {
     elm?:HTMLElement,
     iniColor?:string,
@@ -26,10 +44,16 @@ export default class ToggleBgColor {
     if(options.elm) this.elm = options.elm;
     if(options.iniColor) this.colors[0] = options.iniColor;
     if(options.altColor) this.colors[1] = options.altColor;
+    return this;
   }
 
+  /**
+   * 背景色をトグルする
+   * @return this ToggleBgColor;
+   */
   toggle() {
     this.elm.style.backgroundColor = this.colors[Number(this.state.isAlt)];
     this.state.isAlt = !this.state.isAlt;
+    return this;
   }
 }

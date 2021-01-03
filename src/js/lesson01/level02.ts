@@ -7,11 +7,8 @@ const buttons = document.getElementsByClassName('Lesson01Level02Button');
 if(buttons.length) {
   const toggleBgColor = new ToggleBgColor();
   [...buttons].forEach(button => {
-    const buttonParent = <HTMLElement>document.body;
-    if(buttonParent) {
-      button.addEventListener('click', (_evt) => {
-        toggleBgColor.toggle();
-      })
-    }
+    button.addEventListener('click', (_evt) => {
+      toggleBgColor.toggle();
+    })
   })
 }
