@@ -10,6 +10,7 @@ export default ({htmlWebpackPlugin}: ProcessedOptions) => {
         <div>
           <ButtonLink href="lesson01/level00">level00</ButtonLink>
           <ButtonLink href="lesson01/level01">level01</ButtonLink>
+          <ButtonLink href="lesson01/level02">level02</ButtonLink>
           <ButtonLink>TOP</ButtonLink>
           <ButtonLink href="template">テンプレート</ButtonLink>
         </div>
