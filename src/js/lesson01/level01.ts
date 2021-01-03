@@ -6,10 +6,10 @@ console.log('level01');
 const button = document.getElementById('Lesson01Level01Button');
 if(button) {
   const buttonParent = <HTMLElement>button.parentNode;
+  const toggleBgColor = new ToggleBgColor();
   if(buttonParent) {
-    const parentToggle = new ToggleBgColor(buttonParent);
     button.addEventListener('click', (_evt) => {
-      parentToggle.toggle();
+      toggleBgColor.toggle();
     })
   }
 }

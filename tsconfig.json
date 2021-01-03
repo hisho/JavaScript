@@ -11,7 +11,7 @@
     "tsBuildInfoFile": "./.cache/ts/.tsbuildinfo",
     "importHelpers": true,
     "downlevelIteration": true,
-    "lib": ["dom", "es2015", "dom.iterable"],
+    "lib": ["dom", "es2015", "dom.iterable", "es2019"],
     "baseUrl": ".",
     "paths": {
       "src/*": ["src/*"]
