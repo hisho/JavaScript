@@ -16,13 +16,11 @@ export default ({htmlWebpackPlugin}: ProcessedOptions) => {
       </Section>
 
       <Section>
-        <div>
-          {/*
-             classはclassName=""として付けることができます。
-             idはid=""として付けることができます。
-          */}
-          <Button className="exampleClassName" id="exampleID">ボタン</Button>
-        </div>
+        {/*
+           classはclassName=""として付けることができます。
+           idはid=""として付けることができます。
+        */}
+        <Button className="exampleClassName" id="exampleID">ボタン</Button>
       </Section>
     </>
   )(htmlWebpackPlugin);
