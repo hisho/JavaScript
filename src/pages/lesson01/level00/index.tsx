@@ -1,9 +1,9 @@
 import React from 'react';
-import {ProcessedOptions} from 'html-webpack-plugin';
-import {newRenderToStaticMarkup} from "src/hooks";
-import {Button, ButtonLink, Section} from "src/components";
+import { ProcessedOptions } from 'html-webpack-plugin';
+import { newRenderToStaticMarkup } from "src/hooks";
+import { Button, ButtonLink, Section } from "src/components";
 
-export default ({htmlWebpackPlugin}: ProcessedOptions) => {
+export default ({ htmlWebpackPlugin }: ProcessedOptions) => {
   return newRenderToStaticMarkup(
     <>
       <Section>
