@@ -19,7 +19,7 @@ export default ({htmlWebpackPlugin}: ProcessedOptions) => {
            classはclassName=""として付けることができます。
            idはid=""として付けることができます。
         */}
-        <Button className="exampleClassName" id="exampleID">ボタン</Button>
+        <Button className="color-change__button" id="color-change__button">ボタン</Button>
       </Section>
     </>
   )(htmlWebpackPlugin);
