@@ -1,11 +1,11 @@
 /**
  * 背景色をトグルする
  */
-export default class ToggleBgColor {
+export default class SwitchBgColor {
   private elm:HTMLElement;
-  private readonly colors: string[];
+  private colors: string[];
   private state: {
-    isAlt:boolean
+    pointer:number
   };
 
   /**
@@ -13,18 +13,17 @@ export default class ToggleBgColor {
    * @param options.elm HTMLElement 背景色を変更するターゲットHTML要素
    * @param options.iniColor String カラー１
    * @param options.altColor String カラー２
-   * @return this ToggleBgColor
+   * @return this SwitchBgColor
    */
   constructor(options?:{
     elm?:HTMLElement,
-    iniColor?:string,
-    altColor?:string
+    colors:string[]
   }) {
     this.elm = document.body;
     this.colors = ['#3cb371', '#ffa500'];
     if(options) this.config(options);
     this.state = {
-      isAlt: false
+      pointer: 0
     };
     return this;
   }
@@ -34,26 +33,34 @@ export default class ToggleBgColor {
    * @param options.elm HTMLElement 背景色を変更するターゲットHTML要素
    * @param options.iniColor String カラー１
    * @param options.altColor String カラー２
-   * @return this ToggleBgColor;
+   * @return this SwitchBgColor;
    */
   config(options: {
     elm?:HTMLElement,
-    iniColor?:string,
-    altColor?:string
+    colors:string[]
   }) {
     if(options.elm) this.elm = options.elm;
-    if(options.iniColor) this.colors[0] = options.iniColor;
-    if(options.altColor) this.colors[1] = options.altColor;
+    if(options.colors) this.colors = options.colors;
     return this;
   }
 
   /**
-   * 背景色をトグルする
-   * @return this ToggleBgColor;
+   * 背景色を次にすすめる
+   * @return this SwitchBgColor;
    */
-  toggle() {
-    this.elm.style.backgroundColor = this.colors[Number(this.state.isAlt)];
-    this.state.isAlt = !this.state.isAlt;
+  next() {
+    this.elm.style.backgroundColor = this.colors[this.state.pointer];
+    if(++this.state.pointer >= this.colors.length) this.state.pointer -= this.colors.length;
+    return this;
+  }
+
+  /**
+   * 背景色を前にもどす
+   * @return this SwitchBgColor;
+   */
+  back() {
+    this.elm.style.backgroundColor = this.colors[this.state.pointer];
+    if(--this.state.pointer < 0) this.state.pointer += this.colors.length;
     return this;
   }
 }

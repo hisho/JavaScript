@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d33762ed-0043-4742-91dc-e8457ab5d1ef" name="Default Changelist" comment="env: gitignore">
-      <change beforePath="$PROJECT_DIR$/src/js/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lesson01/level01.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lesson01/level01.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lesson01/level02.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lesson01/level02.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lesson01/level03.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lesson01/level03.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lesson01/level04.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lesson01/level04.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lesson01/level05.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lesson01/level05.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lib/ToggleBgColor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lib/SwitchBgColor.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +22,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="develop" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="yama" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,6 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -59,6 +69,14 @@
       <updated>1609652300986</updated>
       <workItem from="1609652302374" duration="13564000" />
     </task>
+    <task id="LOCAL-00001" summary="env: gitignore">
+      <created>1610028260915</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610028260915</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,7 +87,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -78,8 +108,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new: level04とlevel05を追加" />
-    <MESSAGE value="env: gitignore" />
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="env: gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="env: gitignore" />
   </component>
 </project>
