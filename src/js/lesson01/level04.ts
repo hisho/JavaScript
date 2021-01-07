@@ -10,9 +10,7 @@ const colorPallet = [
 const buttons = document.getElementsByClassName('Lesson01Level04Button');
 if(buttons.length) {
   [...buttons].forEach((button, index) => {
-    const switchBgColor = new SwitchBgColor({
-      colors: colorPallet[index]
-    });
+    const switchBgColor = new SwitchBgColor().config({colors: colorPallet[index]});
 
     button.addEventListener('click', (_evt) => {
       switchBgColor.next();

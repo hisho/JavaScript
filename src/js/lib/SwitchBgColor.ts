@@ -4,34 +4,20 @@
 export default class SwitchBgColor {
   private elm:HTMLElement;
   private colors: string[];
-  private state: {
-    pointer:number
-  };
+  private pointer:number;
 
-  /**
-   * コンストラクタ
-   * @param options.elm HTMLElement 背景色を変更するターゲットHTML要素
-   * @param options.colors 変更するカラーの配列
-   * @return this SwitchBgColor;
-   */
-  constructor(options?:{
-    elm?:HTMLElement,
-    colors:string[]
-  }) {
+  constructor() {
     this.elm = document.body;
-    this.colors = ['#ffa500', '#3cb371'];
-    if(options) this.config(options);
-    this.state = {
-      pointer: 0
-    };
+    this.colors = ['#ffffff', '#000000'];
+    this.pointer = 0;
     return this;
   }
 
   /**
    * 設定を変更する
-   * @param options.elm HTMLElement 背景色を変更するターゲットHTML要素
-   * @param options.colors 変更するカラーの配列
-   * @return this SwitchBgColor;
+   * @param {HTMLElement} options.elm HTMLElement 背景色を変更するターゲットHTML要素
+   * @param {string[]} options.colors 変更するカラーの配列
+   * @return {this} SwitchBgColor;
    */
   config(options: {
     elm?:HTMLElement,
@@ -44,21 +30,21 @@ export default class SwitchBgColor {
 
   /**
    * 背景色を次にすすめる
-   * @return this SwitchBgColor;
+   * @return {this} SwitchBgColor;
    */
   next() {
-    if(++this.state.pointer >= this.colors.length) this.state.pointer -= this.colors.length;
-    this.elm.style.backgroundColor = this.colors[this.state.pointer];
+    if(++this.pointer >= this.colors.length) this.pointer -= this.colors.length;
+    this.elm.style.backgroundColor = this.colors[this.pointer];
     return this;
   }
 
   /**
    * 背景色を前にもどす
-   * @return this SwitchBgColor;
+   * @return {this} SwitchBgColor;
    */
   back() {
-    if(--this.state.pointer < 0) this.state.pointer += this.colors.length;
-    this.elm.style.backgroundColor = this.colors[this.state.pointer];
+    if(--this.pointer < 0) this.pointer += this.colors.length;
+    this.elm.style.backgroundColor = this.colors[this.pointer];
     return this;
   }
 }
