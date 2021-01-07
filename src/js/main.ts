@@ -4,3 +4,5 @@ import './lesson01/level02';
 import './lesson01/level03';
 import './lesson01/level04';
 import './lesson01/level05';
+import './lesson01/level06';
+import './lesson01/level07';
