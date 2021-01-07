@@ -1,5 +1,5 @@
 /**
- * 背景色をトグルする
+ * 背景色をスイッチする
  */
 export default class SwitchBgColor {
   private elm:HTMLElement;
@@ -11,9 +11,8 @@ export default class SwitchBgColor {
   /**
    * コンストラクタ
    * @param options.elm HTMLElement 背景色を変更するターゲットHTML要素
-   * @param options.iniColor String カラー１
-   * @param options.altColor String カラー２
-   * @return this SwitchBgColor
+   * @param options.colors 変更するカラーの配列
+   * @return this SwitchBgColor;
    */
   constructor(options?:{
     elm?:HTMLElement,
