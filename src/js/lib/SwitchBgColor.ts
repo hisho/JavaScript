@@ -31,8 +31,7 @@ export default class SwitchBgColor {
   /**
    * 設定を変更する
    * @param options.elm HTMLElement 背景色を変更するターゲットHTML要素
-   * @param options.iniColor String カラー１
-   * @param options.altColor String カラー２
+   * @param options.colors 変更するカラーの配列
    * @return this SwitchBgColor;
    */
   config(options: {
