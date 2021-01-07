@@ -19,7 +19,7 @@ export default class SwitchBgColor {
     colors:string[]
   }) {
     this.elm = document.body;
-    this.colors = ['#3cb371', '#ffa500'];
+    this.colors = ['#ffa500', '#3cb371'];
     if(options) this.config(options);
     this.state = {
       pointer: 0
@@ -47,8 +47,8 @@ export default class SwitchBgColor {
    * @return this SwitchBgColor;
    */
   next() {
-    this.elm.style.backgroundColor = this.colors[this.state.pointer];
     if(++this.state.pointer >= this.colors.length) this.state.pointer -= this.colors.length;
+    this.elm.style.backgroundColor = this.colors[this.state.pointer];
     return this;
   }
 
@@ -57,8 +57,8 @@ export default class SwitchBgColor {
    * @return this SwitchBgColor;
    */
   back() {
-    this.elm.style.backgroundColor = this.colors[this.state.pointer];
     if(--this.state.pointer < 0) this.state.pointer += this.colors.length;
+    this.elm.style.backgroundColor = this.colors[this.state.pointer];
     return this;
   }
 }

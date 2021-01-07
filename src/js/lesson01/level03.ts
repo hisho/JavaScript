@@ -4,9 +4,9 @@ import SwitchBgColor from "src/js/lib/SwitchBgColor";
 console.log('level03');
 
 const colorPallet = [
-  ['#3cb371', '#ffa500'],
-  ['#ffc0cb', '#6495ed'],
-  ['#9370db', '#fffaf0'],
+  ['#ffa500', '#3cb371'],
+  ['#6495ed', '#ffc0cb'],
+  ['#fffaf0', '#9370db'],
 ];
 
 const buttons = document.getElementsByClassName('Lesson01Level03Button');
