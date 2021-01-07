@@ -8,7 +8,7 @@ export default ({htmlWebpackPlugin}: ProcessedOptions) => {
     <>
       <Section>
         <div>
-          <p>#Lesson01Level06Buttonを取得し、ボタンを一度押すとbodyの背景色が<br />#3cb371に変わるコードを書け！</p>
+          <p>#Lesson01Level06Buttonを取得し、ボタンを一度だけ押すとbodyの背景色が<br />#3cb371に変わるコードを書け！</p>
           <ButtonLink>TOPに戻る</ButtonLink>
           <p className="text-center text-8xl">↓</p>
         </div>
