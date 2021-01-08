@@ -5,9 +5,8 @@ console.log('test');
 
 
 const getomi = document.querySelector('.ominoButton');
-// const getomi =document.getElementById('exampleID')
-
-console.log(getomi);
+if (getomi) {
+  console.log(getomi);
 var nam = 0;
 
 getomi.addEventListener('click', () => {
@@ -24,6 +23,9 @@ console.log(nam);
   }
 
 }, false);
+
+
+ }
 
 
 
