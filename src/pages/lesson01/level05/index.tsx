@@ -1,9 +1,9 @@
 import React from 'react';
-import {ProcessedOptions} from 'html-webpack-plugin';
-import {newRenderToStaticMarkup} from "src/hooks";
-import {Button, ButtonLink, Section} from "src/components";
+import { ProcessedOptions } from 'html-webpack-plugin';
+import { newRenderToStaticMarkup } from "src/hooks";
+import { Button, ButtonLink, Section } from "src/components";
 
-export default ({htmlWebpackPlugin}: ProcessedOptions) => {
+export default ({ htmlWebpackPlugin }: ProcessedOptions) => {
   return newRenderToStaticMarkup(
     <>
       <Section>
@@ -16,7 +16,7 @@ export default ({htmlWebpackPlugin}: ProcessedOptions) => {
 
       <Section>
         <div>
-          <label>カラーピッカー：<input type="color" id="Lesson01Level05Color01" /></label>
+          <label>カラーピッカー：<input type="color" id="Lesson01Level05Color01" value="" /></label>
           <Button id="Lesson01Level05Button">ボタン1</Button>
         </div>
       </Section>
